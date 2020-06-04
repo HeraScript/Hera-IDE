@@ -1,0 +1,21 @@
+postfix 1 ++ -> x++ => x++;
+postfix 1 -- -> x-- => x--;
+prefix 1 -- -> --x => --x;
+prefix 1 ++ -> ++x => ++x;
+prefix 1 - -> -x => -x;
+prefix 1 + -> +x => +x;
+infixl 1 : -> x:xs => [x, ...xs];
+infixl 1 !! -> xs !! n => xs[n];
+infixl 2 * -> x * y => x * y;
+infixl 2 / -> x / y => x / y;
+infixl 3 + -> x + y => x + y;
+infixl 3 - -> x - y => x - y;
+infixl 5 == -> x == y => x === y;
+infixl 5 != -> x != y => x !== y;
+infixl 5 < -> x < y => x < y;
+infixl 5 > -> x > y => x > y;
+infixl 14 := -> x := y => x = y;
+
+//function print() {
+//	native "console.log(...arguments)";
+//}

@@ -1,0 +1,71 @@
+/**
+ 1. 支持跟大多数语言一样的注释语法(多行、单行)
+ */
+
+/**
+ 2. 变量声明
+ 用 val 声明一个不可变量 which means var final, 等同于 JavaScript 中的 const
+ 用 var 声明一个变量, 等同于 JavaScript 中的 var.
+ 可变量的赋值需要用 := 操作符来进行
+
+ 需要注意的是, 每个 statement 后面必须以 `;` 结尾
+ */
+val s = "Hello HeraScript";
+var sr = "variable";
+sr := "changed";
+
+// 3. Array
+val array = [1, 2, 3];
+
+// 4. Array access
+array !! 1; // array[1]
+
+// 5. Number
+val a = 123;
+val b = 0.123;
+val c = 1e2;
+val d = 1e-2;
+val e = 0.1e-2;
+
+// 6. for 循环
+var sum = 0;
+for (var i = 0; i < 10; i++) {
+	sum := sum + i;
+}
+
+// 7. if
+if (sum > 8) {
+	sum := 8;
+}
+
+// 8. 用 function 声明一个函数
+function add(x, y) {
+	return x + y;
+}
+
+// 9. 声明 arrow function
+val f = x => x + 1;
+
+val f1 = (x, y) => {
+	return x + y;
+};
+
+// 10. function prefix apply
+add(1, 2); // 3
+
+// 11. function as infix operator
+1 `add` 2; // 3
+
+// 12. operator prefix apply
+(*)(2, 3);
+
+// 13. operator as function
+val opf = (f, x) => f(x, 2);
+opf((*), 3); // 3 * 2 = 6
+
+// 14. partial application of operators
+(* 2)(3);
+(2 *)(3);
+
+// 15. 在 haskell 中, (+ 2 * 3) 是合法的, 但在 Hera 中, 需要写成 (+ (2 * 3))
+(+ (2 * 3))(4); // 2 * 3 + 4 = 10

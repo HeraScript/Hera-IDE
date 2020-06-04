@@ -1,0 +1,54 @@
+#hand-ex-inner,
+#hand-h-inner,
+#hand-v-inner {
+	border-color: var(--theme-handler);
+	background: var(--theme-background);
+}
+
+#hand-ex {
+	left: calc(var(--handex) - var(--handler-width-half));
+	top: 0;
+	width: var(--handler-width);
+	height: 100vh;
+	position: absolute;
+	cursor: ew-resize;
+	z-index: 100;
+}
+
+#hand-h {
+	top: calc(var(--codeh) - var(--handler-width-half));
+	left: calc(var(--handex) + 1px);
+	width: calc(100vw - var(--handex));
+	height: var(--handler-width);
+	position: absolute;
+	cursor: ns-resize;
+	z-index: 100;
+}
+
+#hand-v {
+	left: calc(var(--handv) - var(--handler-width-half));
+	top: 0;
+	width: var(--handler-width);
+	height: var(--codeh);
+	position: absolute;
+	cursor: ew-resize;
+	z-index: 100;
+}
+
+#hand-ex-inner,
+#hand-v-inner {
+	border-left: 1px solid var(--theme-handler);
+	border-right: 1px solid var(--theme-handler);
+	height: 100%;
+	margin: 0 3px 3px 3px;
+	opacity: 0.8;
+}
+
+#hand-h-inner {
+	border-top: 1px solid var(--theme-handler);
+	border-bottom: 1px solid var(--theme-handler);
+	margin: 4px 0 4px 0;
+	width: 100%;
+	height: 1px;
+	opacity: 0.8;
+}

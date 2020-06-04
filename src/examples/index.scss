@@ -1,0 +1,30 @@
+.active {
+	background: var(--theme-selected-background);
+	font-weight: 700;
+	&:hover {
+		background: var(--theme-selected-background) !important;
+	}
+}
+
+#snippet-list {
+	margin-top: 8px;
+	font-size: 13px;
+	li {
+		cursor: pointer;
+		height: 20px;
+		line-height: 20px;
+		white-space: nowrap;
+		padding: 3px 5px 3px 20px;
+		&:hover {
+			background: var(--theme-bar-background);
+		}
+	}
+}
+
+.anchor {
+	padding: 0 4px 0 2px;
+	&:hover {
+		text-decoration: underline;
+		color: crimson;
+	}
+}

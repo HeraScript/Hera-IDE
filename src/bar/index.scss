@@ -1,0 +1,13 @@
+.bar {
+	width: 100%;
+	height: var(--bar-height);
+	color: var(--theme-secondary-foreground);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-left: 12px;
+	box-sizing: border-box;
+	background: var(--theme-bar-background);
+	border-bottom: 1px solid;
+	border-color: var(--theme-border-color);
+}

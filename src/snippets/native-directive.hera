@@ -1,0 +1,17 @@
+/**
+ * 有时候语言现有的功能满足不了需要时, 我们可以通过 native 声明原生表达式来实现
+ * 比如发现没有类似 js 中的 console.log 的功能, 我们可以定义一个 print 来实现
+ */
+function print() {
+  native "console.log(...arguments)";
+}
+
+print(1, 2, 3);
+
+// 定义 foldl
+function foldl(f, x, xs) {
+	return native "xs.reduce(f, x)";
+}
+
+// Sum
+foldl((+), 0, [1, 2, 3]); // 6

@@ -1,0 +1,23 @@
+/**
+ * syntax: [notation] [priority] [op] -> [hera expression] => [native expression]
+ *
+ * notation: postfix | prefix | infix | infixl | infixr
+ * 分为 前缀、后缀、中缀声明, 中缀声明又分为左联、右联
+ *
+ * priority: 操作符的优先级, 数字越小, 优先级越高
+ * 比如 * / 的优先级比 + - 高, 这是因为 * / 的 priority 是 2, 而 + - 是 3
+ *
+ * op: 需要自定义的操作符, 在这个例子中是 `!!`
+ *
+ * hera expression: 操作符在 hera 中的使用方式
+ *
+ * native expression: 此操作符对应的原生表达式, 我们是编译到 JavaScript, 所以这里是 js 的表达式
+ */
+
+infixl 1 !! -> xs !! x => xs[x];
+infixl 4 @ -> xs @ x => xs[x];
+infixl 1 +++ -> xs +++ ys => [...xs, ...ys];
+
+[1,5,3,4] !! 2 - 1; // [1,5,3,4][2] - 1 = 2
+[1,5,3,4] @ 2 - 1; // [1,5,3,4][2-1] = 5
+[1,2,3] +++ [4,5]; // [1,2,3,4,5,6]

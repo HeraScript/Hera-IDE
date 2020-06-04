@@ -1,0 +1,87 @@
+body {
+	--theme-background: #fff;
+	--theme-bar-background: #f1f1f1;
+	--theme-hover-background: rgba(0, 0, 0, 0.05);
+	--theme-foreground: #000;
+	--theme-border-color: gainsboro;
+	--theme-selected-background: linen;
+	--theme-secondary-foreground: #777;
+	--theme-handler: #808080;
+
+	--size-scrollbar: 12px;
+
+	--bar-height: 35px;
+	--handler-width: 9px;
+	--handler-width-half: calc(var(--handler-width) / 2);
+	--handex: 15vw;
+	--handv: 65vw;
+	--out: 60vw;
+	--codeh: 70vh;
+
+	overflow: hidden;
+}
+
+button {
+	outline: 0;
+	background: var(--theme-background);
+	border: 1px solid var(--theme-border-color);
+	color: var(--theme-foreground);
+	border-radius: 3px;
+	margin: 0 3px;
+	height: 22px;
+	cursor: pointer;
+}
+
+.tool {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-right: 12px;
+}
+
+#examples {
+	position: absolute;
+	width: var(--handex);
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+#source {
+	position: absolute;
+	width: calc(var(--handv) - var(--handex));
+	height: var(--codeh);
+	top: 0;
+	left: var(--handex);
+}
+
+#out {
+	position: absolute;
+	width: calc(100vw - var(--handv));
+	height: var(--codeh);
+	top: 0;
+	left: var(--handv);
+}
+
+::-webkit-scrollbar {
+	width: var(--size-scrollbar);
+	background-color: var(--theme-background);
+}
+::-webkit-scrollbar-thumb {
+	width: var(--size-scrollbar);
+	background-color: var(--theme-border-color);
+	opacity: 0.6;
+}
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:focus {
+	background-color: var(--theme-selected-background);
+	opacity: 1;
+}
+::-webkit-scrollbar-thumb:active {
+	background-color: var(--theme-handler);
+	opacity: 1;
+}
+::-webkit-scrollbar-corner {
+	background-color: var(--theme-background);
+}

@@ -1,0 +1,22 @@
+var x = 10;
+var y = 2;
+
+// postfix
+x--;
+x++;
+
+// prefix
+++y;
+--x;
+
+x * y;
+x / y;
+x + y;
+x - y;
+
+// Array concat
+1 : [2, 3]; // [1, 2, 3]
+
+// Equality
+2 == 2;
+3 != 2;

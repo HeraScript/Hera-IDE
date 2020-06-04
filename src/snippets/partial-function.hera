@@ -1,0 +1,15 @@
+function plus(x, y) {
+	return x + y;
+}
+
+function sub(x, y) {
+	return x - y;
+}
+
+// Pass first param
+val plus2 = plus(2);
+plus2(3); // 2 + 3 = 5
+
+// Pass second param
+val sub2 = sub(, 2);
+sub2(5); // 5 - 2 = 3
